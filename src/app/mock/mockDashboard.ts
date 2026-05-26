@@ -1,0 +1,98 @@
+import type { Tank } from '../types/dashboard';
+
+function buildHistoryPoint(
+  recordedAt: string,
+  temperature: number,
+  oxygen: number,
+  time: string,
+) {
+  return {
+    time,
+    recordedAt,
+    temp: temperature,
+    oxygen,
+  };
+}
+
+export const mockDashboardTanks: Tank[] = [
+  {
+    id: '1',
+    name: 'Tanque Norte 01',
+    fishType: 'Tilapia',
+    location: 'Setor A',
+    temperature: 27.1,
+    oxygen: 6.4,
+    status: 'ok',
+    tempMin: 24,
+    tempMax: 29,
+    oxygenMin: 5.5,
+    oxygenMax: 8,
+    updatedAt: '2026-05-25T10:30:00.000Z',
+    history: [
+      buildHistoryPoint('2026-05-25T08:00:00.000Z', 25.4, 6.0, '08:00'),
+      buildHistoryPoint('2026-05-25T09:00:00.000Z', 26.0, 6.2, '09:00'),
+      buildHistoryPoint('2026-05-25T10:00:00.000Z', 26.8, 6.3, '10:00'),
+      buildHistoryPoint('2026-05-25T10:30:00.000Z', 27.1, 6.4, '10:30'),
+    ],
+  },
+  {
+    id: '2',
+    name: 'Tanque Sul 02',
+    fishType: 'Tambaqui',
+    location: 'Setor B',
+    temperature: 22.2,
+    oxygen: 5.1,
+    status: 'warning',
+    tempMin: 23,
+    tempMax: 28,
+    oxygenMin: 5.4,
+    oxygenMax: 7.4,
+    updatedAt: '2026-05-25T10:28:00.000Z',
+    history: [
+      buildHistoryPoint('2026-05-25T08:00:00.000Z', 23.8, 5.7, '08:00'),
+      buildHistoryPoint('2026-05-25T09:00:00.000Z', 23.4, 5.5, '09:00'),
+      buildHistoryPoint('2026-05-25T10:00:00.000Z', 22.9, 5.3, '10:00'),
+      buildHistoryPoint('2026-05-25T10:28:00.000Z', 22.2, 5.1, '10:28'),
+    ],
+  },
+  {
+    id: '3',
+    name: 'Tanque Leste 03',
+    fishType: 'Pacu',
+    location: 'Setor C',
+    temperature: 30.3,
+    oxygen: 4.2,
+    status: 'critical',
+    tempMin: 24,
+    tempMax: 28,
+    oxygenMin: 5.2,
+    oxygenMax: 7.1,
+    updatedAt: '2026-05-25T10:32:00.000Z',
+    history: [
+      buildHistoryPoint('2026-05-25T08:00:00.000Z', 28.2, 5.1, '08:00'),
+      buildHistoryPoint('2026-05-25T09:00:00.000Z', 29.1, 4.9, '09:00'),
+      buildHistoryPoint('2026-05-25T10:00:00.000Z', 29.7, 4.5, '10:00'),
+      buildHistoryPoint('2026-05-25T10:32:00.000Z', 30.3, 4.2, '10:32'),
+    ],
+  },
+  {
+    id: '4',
+    name: 'Tanque Oeste 04',
+    fishType: 'Pirarucu',
+    location: 'Setor D',
+    temperature: 25.8,
+    oxygen: 6.8,
+    status: 'ok',
+    tempMin: 24,
+    tempMax: 30,
+    oxygenMin: 5.8,
+    oxygenMax: 8.4,
+    updatedAt: '2026-05-25T10:24:00.000Z',
+    history: [
+      buildHistoryPoint('2026-05-25T08:00:00.000Z', 25.0, 6.3, '08:00'),
+      buildHistoryPoint('2026-05-25T09:00:00.000Z', 25.1, 6.4, '09:00'),
+      buildHistoryPoint('2026-05-25T10:00:00.000Z', 25.5, 6.6, '10:00'),
+      buildHistoryPoint('2026-05-25T10:24:00.000Z', 25.8, 6.8, '10:24'),
+    ],
+  },
+];

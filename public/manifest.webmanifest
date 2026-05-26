@@ -1,0 +1,23 @@
+{
+  "name": "Aquafeed Dashboard",
+  "short_name": "Aquafeed",
+  "description": "Monitoramento de tanques com dashboard dinamico e suporte offline.",
+  "lang": "pt-BR",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#eff6ff",
+  "theme_color": "#0f4ecd",
+  "icons": [
+    {
+      "src": "./if.png",
+      "sizes": "267x360",
+      "type": "image/png"
+    },
+    {
+      "src": "./ifs_logo.png",
+      "sizes": "384x472",
+      "type": "image/png"
+    }
+  ]
+}
